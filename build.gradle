@@ -29,19 +29,46 @@ ext {
 }
 
 dependencies {
+	// 애플리케이션 모니터링 및 관리 기능
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+	// JPA 기반 데이터 접근을 위한 Spring Data JPA 기능 제공 (Hibernate 포함)
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// 인증, 인가
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	// 데이터 검증(Bean Validation, Hibernate Validator)
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	// RESTful 웹 애플리케이션 개발을 위한 Spring MVC 및 내장 톰캣 제공
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Getter, Setter 등 제공
 	compileOnly 'org.projectlombok:lombok'
+
+	// 개발 중에 자동 재시작 등 편의 기능 제공
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// MySQL 데이터베이스와 연결하기 위한 JDBC 드라이버
 	runtimeOnly 'com.mysql:mysql-connector-j'
+
+	// 설정 프로퍼티 메타데이터 생성을 위한 어노테이션 프로세서
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+	// 컴파일 시 Lombok 어노테이션 처리(코드 자동 생성)
 	annotationProcessor 'org.projectlombok:lombok'
+
+	// JUnit, Mockito 등 테스트를 위한 기본 라이브러리 제공
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// REST API 문서를 생성하기 위한 테스트 지원
 	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+
+	// Spring Security 관련 테스트 지원 라이브러리
 	testImplementation 'org.springframework.security:spring-security-test'
+
+	// JUnit 5 테스트를 실행하기 위한 런처
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
